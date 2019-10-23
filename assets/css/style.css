@@ -1,0 +1,56 @@
+body {
+    background-image: url('/Users/SIMConsultant1/Desktop/BootCamp/unit-4-game/assets/images/ostereierglow11080p.jpg');
+    
+}
+
+.heading {
+    width: 40%;
+    background: black;
+    color: white;
+    margin: 0 auto;
+}
+
+.main-body {
+    
+    padding: 20px;
+    background: black;
+    color: white;
+    font-size: 1.4em;
+    font-family: 'Patrick Hand', cursive;
+}
+
+.score {
+
+    padding: 20px;
+    box-sizing: border-box;
+    background: black;
+    display: inline-block;
+    color: white;
+    font-size: 1.4em;
+    font-family: 'Patrick Hand', cursive;
+}
+
+
+.crystal img{
+    border-radius: 50%;
+    margin: auto;    
+    display: block;
+}
+
+#title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3em;
+    text-align: center;
+    padding: 10px;
+}
+
+#game-stats {
+    text-align: center;
+    margin: auto;    
+    display: block;
+    
+}
+
+
+
+
