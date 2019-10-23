@@ -12,7 +12,7 @@ body {
 
 .main-body {
     
-    padding: 20px;
+    padding: 10px 20px;
     background: black;
     color: white;
     font-size: 1.3em;
@@ -21,7 +21,7 @@ body {
 
 .score {
     width: auto;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
     background: black;
     display: block;
@@ -50,7 +50,7 @@ body {
     text-align: center;
     margin: auto;    
     display: block;
-    padding: 20px 10px 10px 10px;
+    padding: 10px;
     
 }
 
