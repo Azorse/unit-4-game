@@ -7,13 +7,10 @@ var crystals = {}
 
 
 
-function reset () {
+function reset() {
     currentScore = 0;
     $('#current-score').html('');
-    $('#game-status').html('');
-    
-
-
+    beginGame();
 }
 
 function gameStatus () {
@@ -41,51 +38,52 @@ function endGame() {
         $('#game-status').html('You Won!');
         gamesWon++;
         $('#wins').html(gamesWon);
-        reset();
+        
       
     } else {
         $('#game-status').html('You Lost!');
         gamesLost++;
         $('#losses').html(gamesLost);
-        reset();
-
-    }
     
+        
+    }
+    reset();
     
 }
 
 $(document).ready(function() {
 
     beginGame();
+    if (currentScore < targetScore) {
+        $('#crystal1').click(function() {
+            currentScore += crystals.cry1
+            $('#current-score').html(currentScore);
+            console.log(currentScore)
+            gameStatus();
+        });
 
-    $('#crystal1').click(function() {
-        currentScore += crystals.cry1
-        $('#current-score').html(currentScore);
-        console.log(currentScore)
-        gameStatus();
-    });
+        $('#crystal2').click(function() {
+            currentScore += crystals.cry2
+            $('#current-score').html(currentScore);
+            console.log(currentScore)
+            gameStatus();
+        });
 
-    $('#crystal2').click(function() {
-        currentScore += crystals.cry2
-        $('#current-score').html(currentScore);
-        console.log(currentScore)
-        gameStatus();
-    });
+        $('#crystal3').click(function() {
+            currentScore += crystals.cry3
+            $('#current-score').html(currentScore);
+            console.log(currentScore)
+            gameStatus();
+        });
 
-    $('#crystal3').click(function() {
-        currentScore += crystals.cry3
-        $('#current-score').html(currentScore);
-        console.log(currentScore)
-        gameStatus();
-    });
-
-    $('#crystal4').click(function() {
-        currentScore += crystals.cry4
-        $('#current-score').html(currentScore);
-        console.log(currentScore)
-        gameStatus();
-      
-    });
-
+        $('#crystal4').click(function() {
+            currentScore += crystals.cry4
+            $('#current-score').html(currentScore);
+            console.log(currentScore)
+            gameStatus();
+        
+        });
+    } 
+    
 
 });
