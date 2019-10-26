@@ -19,13 +19,11 @@ function gameStatus () {
 function beginGame() {
     targetScore = Math.floor((Math.random() * 102) + 19)
     $('#target-score').html(targetScore);
-    console.log(targetScore);
 
     for (var i = 1; i < 5; i++) {
-        var value = "cry" + i;
+        var value = "crystal" + i;
         crystals[value] = Math.floor(Math.random() * 12 + 1);
     }
-    console.log(crystals);
 }
 
 function endGame() {
@@ -52,26 +50,26 @@ $(document).ready(function() {
 
     beginGame();
     if (currentScore < targetScore) {
-        $('#crystal1').click(function() {
-            currentScore += crystals.cry1
+        $('#crystal1, #crystal2, #crystal3, #crystal4' ).click(function(event) {
+            currentScore += crystals[event.target.id]
             update();
         });
 
-        $('#crystal2').click(function() {
-            currentScore += crystals.cry2
-            update();
-        });
+        // $('#crystal2').click(function() {
+        //     currentScore += crystals.cry2
+        //     update();
+        // });
 
-        $('#crystal3').click(function() {
-            currentScore += crystals.cry3
-            update();
-        });
+        // $('#crystal3').click(function() {
+        //     currentScore += crystals.cry3
+        //     update();
+        // });
 
-        $('#crystal4').click(function() {
-            currentScore += crystals.cry4
-            update();
+        // $('#crystal4').click(function() {
+        //     currentScore += crystals.cry4
+        //     update();
         
-        });
+        // });
     } 
     
 
